@@ -32,6 +32,8 @@ class LinkedList {
   }
 }
 
+// update
+
 let myLinkedList = new LinkedList(10);
 myLinkedList.append(5);
 myLinkedList.append(16);myLinkedList.prepend(1)
