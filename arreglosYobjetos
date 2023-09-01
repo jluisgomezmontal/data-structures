@@ -1,0 +1,159 @@
+const notas = [80, 90, 70, 85, 95];
+const promedio = notas.reduce((acumulador, nota) => acumulador + nota, 0) / notas.length;
+// promedio es 84
+const edades = [25, 30, 18, 40, 15];
+const mayoresDeEdad = edades.reduce((contador, edad) => (edad >= 18 ? contador + 1 : contador), 0);
+// mayoresDeEdad es 3
+
+
+/*
+const palabras = ["Hola", " ", "mundo", "!"];
+const frase = palabras.reduce((acumulador, palabra) => acumulador + palabra, "");
+// frase es "Hola mundo!"
+
+const numeros = [1, 2, 3, 4, 5,];
+const producto = numeros.reduce((acumulador, numero) => acumulador * numero, 1);
+const producto2 = numeros.forEach((acc, num)=> acc)
+console.log(producto)
+
+// producto es 120
+
+
+const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const numerosPares = numeros.filter(numero => numero !== 5);
+console.log(numerosPares); // Output: [2, 4, 6, 8, 10]
+
+const frutas = ["manzana", "banana", "cereza"];
+const frutasMayusculas = frutas.map(fruta => fruta.toUpperCase());
+console.log(frutasMayusculas); // Output: ["MANZANA", "BANANA", "CEREZA"]
+
+const numeros = [1, 2, 3, 4, 5, 50];
+const suma = numeros.reduce((acumulador, numero) => acumulador + numero);
+console.log(suma); // Output: 15
+
+const numeros = [100, 5, 8, 20, 1];
+const maximo = Math.max(...numeros);
+const minimo = Math.min(...numeros);
+console.log(maximo); // Output: 20
+console.log(minimo); // Output: 3
+
+const numeros = [8,1, 2, 2, 3, 4, 4, 5];
+const numerosUnicos = [...new Set(numeros)];
+console.log(numerosUnicos); // Output: [1, 2, 3, 4, 5]
+
+const frutas = ["manzana", "banana", "cereza"];
+const frutasOrdenadas = numeros.sort();
+console.log(frutasOrdenadas); // Output: ["banana", "cereza", "manzana"]
+
+const personas = [
+  { nombre: "Juan", edad: 30 },
+  { nombre: "María", edad: 25 },
+  { nombre: "Pedro", edad: 35 },
+  { nombre: "Luis", edad: 35 },
+];
+
+const persona = personas.find(persona => persona.edad === 35);
+const persona2 = personas.filter(persona => persona.edad === 35);
+console.log(persona); // Output: { nombre: "María", edad: 25 }
+console.log(persona2); // Output: { nombre: "María", edad: 25 }
+
+OBJETOS
+const persona = { nombre: "Juan", edad: 30 };
+delete persona.edad;
+console.log(persona); // Output: { nombre: "Juan" }
+
+const persona = { nombre: "Juan", edad: 30 };
+for (const clave in persona) {
+  console.log(clave, persona[clave]);
+}
+// Output:
+// nombre Juan
+// edad 30
+
+const persona = { nombre: "Juan", edad: 30 };
+const copiaPersona = { ...persona };
+console.log(copiaPersona); // Output: { nombre: "Juan", edad: 30 }
+
+const persona = { nombre: "Juan", edad: 30 };
+console.log("nombre" in persona); // Output: true
+console.log("apellido" in persona); // Output: false
+
+
+const persona = { nombre: "Juan" };
+const detalles = { edad: 30, ciudad: "México",nombre: "Luis" };
+const personaCompleta = { ...persona, ...detalles };
+console.log(personaCompleta);
+// Output: { nombre: "Juan", edad: 30, ciudad: "México" }
+
+const persona = { nombre: "Juan", edad: 30 };
+const claves = Object.keys(persona); // ["nombre", "edad"]
+const valores = Object.values(persona); // ["Juan", 30]
+console.log(claves);
+console.log(valores);
+
+JavaScript proporciona una variedad de métodos incorporados para manipular arreglos. Aquí tienes una lista de los métodos de arreglos más comunes en JavaScript:
+
+push: Agrega uno o más elementos al final de un arreglo y devuelve la nueva longitud del arreglo.
+
+pop: Elimina el último elemento de un arreglo y lo devuelve.
+
+shift: Elimina el primer elemento de un arreglo y lo devuelve.
+
+unshift: Agrega uno o más elementos al principio de un arreglo y devuelve la nueva longitud del arreglo.
+
+concat: Combina dos o más arreglos creando un nuevo arreglo.
+
+join: Convierte todos los elementos de un arreglo en una cadena, separados por un separador especificado.
+
+slice: Devuelve una copia superficial de una porción de un arreglo en un nuevo arreglo.
+
+splice: Cambia el contenido de un arreglo eliminando, reemplazando o agregando elementos en un lugar específico.
+
+forEach: Ejecuta una función en cada elemento de un arreglo.
+
+map: Crea un nuevo arreglo con los resultados de aplicar una función a cada elemento de un arreglo.
+
+filter: Crea un nuevo arreglo con todos los elementos que pasan una prueba especificada en una función.
+
+reduce: Aplica una función a un acumulador y a cada elemento de un arreglo (de izquierda a derecha) para reducirlo a un solo valor.
+
+reduceRight: Similar a reduce, pero comienza a reducir desde el extremo derecho del arreglo hacia el izquierdo.
+
+find: Devuelve el primer elemento en un arreglo que cumple con una prueba proporcionada en una función.
+
+findIndex: Devuelve el índice del primer elemento en un arreglo que cumple con una prueba proporcionada en una función.
+
+every: Comprueba si todos los elementos de un arreglo pasan una prueba proporcionada en una función.
+
+some: Comprueba si al menos un elemento de un arreglo pasa una prueba proporcionada en una función.
+
+sort: Ordena los elementos de un arreglo en su lugar y devuelve el arreglo ordenado.
+
+reverse: Invierte el orden de los elementos en un arreglo en su lugar.
+
+includes: Comprueba si un arreglo contiene un elemento específico y devuelve true o false.
+
+indexOf: Devuelve el primer índice en el que se encuentra un elemento en un arreglo, o -1 si no se encuentra.
+
+lastIndexOf: Devuelve el último índice en el que se encuentra un elemento en un arreglo, o -1 si no se encuentra.
+
+isArray: Comprueba si un objeto es un arreglo.
+
+fill: Cambia todos los elementos en un arreglo por un valor estático.
+
+flat: Crea una nueva matriz con todos los elementos de sub-array concatenados.
+
+flatMap: Mapea cada elemento en un arreglo y luego aplana el resultado en un nuevo arreglo.
+
+from: Crea un nuevo arreglo a partir de un objeto iterable, como una cadena o un arreglo similar.
+
+keys: Devuelve un nuevo objeto Array Iterator que contiene las claves de índice de un arreglo.
+
+values: Devuelve un nuevo objeto Array Iterator que contiene los valores de un arreglo.
+
+entries: Devuelve un nuevo objeto Array Iterator que contiene pares clave/valor de un arreglo.
+
+copyWithin: Copia una porción de un arreglo a otra ubicación en el mismo arreglo sin cambiar su longitud.
+
+Estos son algunos de los métodos más comunes de arreglos en JavaScript. Cada método tiene su propio propósito y puede ser útil en diferentes situaciones. Es importante estar familiarizado con estos métodos para trabajar eficazmente con arreglos en JavaScript.
+*/
